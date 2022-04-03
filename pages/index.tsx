@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import Fraction from 'fraction.js'
 
 // Will be replaced by package import
-function lineLength([x1, y1]: number[], [x2, y2]: number[]): number {
-  return Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+function lineLength([x1, y1]: number[], [x2, y2]: number[]): string {
+  const length = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+  const lengthFrac = new Fraction(length)
+
+  return lengthFrac.toFraction(true)
 }
 
 const Home: NextPage = () => {
