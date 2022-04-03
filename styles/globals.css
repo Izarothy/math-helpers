@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .pointCord {
+    @apply rounded-lg px-3 py-1 text-sm text-primary-dark placeholder:text-gray-600;
+  }
+}
