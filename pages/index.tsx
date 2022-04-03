@@ -58,9 +58,7 @@ const Home: NextPage = () => {
               className="pointCord"
               placeholder="Second point (X, Y) "
               onChange={(e) => {
-                e.target.value.split(' ').forEach((cord) => {
-                  setPointTwo(e.target.value)
-                })
+                setPointTwo(e.target.value)
               }}
             />
           </span>
