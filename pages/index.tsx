@@ -77,7 +77,13 @@ const Home: NextPage = () => {
 
             switch (currentFunction) {
               case 'linelength':
-                setAnswer(String(lineLength(cordOne, cordTwo)))
+                const length = String(lineLength(cordOne, cordTwo))
+                if (length === 'NaN/NaN') {
+                  setAnswer('')
+                  return setError('Invalid input')
+                }
+
+                setAnswer(length)
             }
           }}
         >
