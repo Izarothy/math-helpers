@@ -64,8 +64,8 @@ const Home: NextPage = () => {
           </span>
         </form>
         <button
-          className="rounded-lg bg-gray-100 px-3 py-1 text-primary-dark"
           type="button"
+          className="rounded-lg bg-gray-100 px-3 py-1 text-primary-dark"
           onClick={() => {
             const cordOne = pointOne
               .split(' ')
