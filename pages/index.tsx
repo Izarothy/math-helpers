@@ -65,6 +65,7 @@ const Home: NextPage = () => {
         </form>
         <button
           className="rounded-lg bg-gray-100 px-3 py-1 text-primary-dark"
+          type="button"
           onClick={() => {
             const cordOne = pointOne
               .split(' ')
@@ -73,15 +74,18 @@ const Home: NextPage = () => {
               .split(' ')
               .map((cord: string) => parseInt(cord))
 
+            let length
             switch (currentFunction) {
               case 'linelength':
-                const length = String(lineLength(cordOne, cordTwo))
+                length = String(lineLength(cordOne, cordTwo))
                 if (length === 'NaN/NaN') {
                   setAnswer('')
                   return setError('Invalid input')
                 }
-
                 setAnswer(length)
+                break
+              default:
+                break
             }
           }}
         >
